@@ -17,7 +17,7 @@ class DevelopersTakeMaxibonsFromFridgeUseCaseTest
     fakeNotifier.reset()
   }
 
-  behavior of "DevelopersTakeMaxibonsFromFridgeUseCaseTest"
+  behavior of "DevelopersTakeMaxibonsFromFridgeUseCase"
 
   it should "perform the taking of maxibons from the fridge by the developers without notifying" in {
     val maxibonsToTake = MaxibonAmount.of(2).toOption.get
