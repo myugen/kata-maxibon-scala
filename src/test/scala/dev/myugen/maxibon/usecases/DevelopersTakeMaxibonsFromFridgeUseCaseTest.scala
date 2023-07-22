@@ -2,15 +2,14 @@ package dev.myugen.maxibon.usecases
 
 import dev.myugen.maxibon.domain.{Developer, Freezer, MaxibonAmount, Message}
 import dev.myugen.maxibon.mocks.FakeSender
+import org.scalatest.BeforeAndAfterEach
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
-import org.scalatest.{BeforeAndAfterEach, OptionValues}
 
 class DevelopersTakeMaxibonsFromFridgeUseCaseTest
     extends AnyFlatSpec
     with Matchers
-    with BeforeAndAfterEach
-    with OptionValues {
+    with BeforeAndAfterEach {
   private val fakeNotifier = new FakeSender()
   private val sut = new DevelopersTakeMaxibonsFromFridgeUseCase(fakeNotifier)
 
